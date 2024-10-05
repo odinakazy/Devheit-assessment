@@ -1,5 +1,10 @@
+import Dashboard from "./pages/Dashboard";
 function App() {
-  return <div className="bg-red-500">hello</div>;
+  return (
+    <>
+      <Dashboard />
+    </>
+  );
 }
 
 export default App;

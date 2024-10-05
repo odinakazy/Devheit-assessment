@@ -2,7 +2,11 @@
 export default {
   content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        "sf-pro": ["SF Pro Display", "sans-serif"], // Custom SF Pro Display font
+      },
+    },
   },
   plugins: [],
 };
