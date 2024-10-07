@@ -1,8 +1,13 @@
+/* eslint-disable react/prop-types */
 import Logo from "../assets/Profile.png";
 import Hamburger from "../assets/Content.svg";
-function Navbar() {
+function Navbar({ OpenMobileNavModal }) {
+  const OpenMobileHandler = () => {
+    OpenMobileNavModal(true);
+  };
+
   return (
-    <div className="flex items-center justify-between p-2 ">
+    <div className="flex items-center justify-between p-2 lg:hidden ">
       {/* Logo */}
       <div>
         <img src={Logo} alt="Logo" className="h-[4rem] w-[4rem]" />
@@ -15,7 +20,9 @@ function Navbar() {
       </div>
       {/* Hamburger Menu */}
       <div className="cursor-pointer">
-        <img src={Hamburger} alt="Hamburger" className="h-[4rem] w-[4rem]" />
+        <button onClick={OpenMobileHandler}>
+          <img src={Hamburger} alt="Hamburger" className="h-[4rem] w-[4rem]" />
+        </button>
       </div>
     </div>
   );

@@ -11,7 +11,10 @@ const getAbbreviation = (name) => {
 
 const CampaignCard = ({ campaign }) => {
   return (
-    <div className="rounded-lg border-b mb-4 mt-6 py-4 ">
+    <div
+      // style={{ border: "2px solid red" }}
+      className="rounded-lg border-b py-4 lg:w-full lg:p-4 lg:bg-white lg:shadow-md"
+    >
       {/* Abbreviation Circle */}
       <div className="flex items-center gap-2">
         <div className="w-12 h-12 flex-shrink-0 rounded-md flex items-center justify-center bg-orange-500 text-white font-bold">

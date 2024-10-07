@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 function Searchbar({ onSearch }) {
   return (
-    <div className="flex items-center bg-[#E7F5FF] rounded-lg p-2 ">
+    <div className="flex items-center bg-[#E7F5FF] rounded-lg p-2 lg:hidden ">
       {/* Search Icon */}
       <div className="flex items-center pl-2 ">
         <svg
