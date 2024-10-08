@@ -13,6 +13,7 @@ import Sidebar from "../components/Sidebar";
 import Header from "../components/Header";
 import Overview from "../components/Overview";
 import Sort from "../components/Sort";
+import CreateCampaign from "../Modal/CreateCampaign";
 
 const mockCampaigns = [
   {
@@ -105,6 +106,7 @@ const mockCampaigns = [
 function Dashboard() {
   const [campaigns, setCampaigns] = useState(mockCampaigns);
   const [openMobileNavModal, setOpenMobileNavModal] = useState(false);
+  const [openCampaignModal, setOpenCampaignModal] = useState(false);
 
   const handleSearch = (event) => {
     const searchQuery = event.target.value.toLowerCase();
@@ -128,8 +130,19 @@ function Dashboard() {
     setCampaigns(filteredCampaigns);
   };
 
+  const handleCampaignData = (newCampaignData) => {
+    // add new campaigne data
+    setCampaigns((prevCampaigns) => [newCampaignData, ...prevCampaigns]);
+  };
+
   return (
     <div className="relative bg-[#ffffff] min-h-screen lg:flex lg:w-full">
+      {openCampaignModal && (
+        <CreateCampaign
+          onOpen={setOpenCampaignModal}
+          onSubmitData={handleCampaignData}
+        />
+      )}
       {openMobileNavModal && (
         <MobileNavigation
           openMobile={openMobileNavModal}
@@ -140,9 +153,10 @@ function Dashboard() {
       <Sidebar />
       <div className="p-4 lg:w-[80%] lg:bg-[#FAFAFA]">
         <Searchbar onSearch={handleSearch} />
-        <Header />
+        <Header onOpen={setOpenCampaignModal} />
         <Overview />
         <Sort onSearch={handleSearch} />
+
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4  lg:w-full">
           {campaigns.map((campaign, index) => (
             <CampaignCard key={index} campaign={campaign} />

@@ -15,7 +15,7 @@ function Overview() {
             <img src={Viewicon} alt="viewicon" />
           </div>
         </div>
-        <div className="flex items-center gap-12 mt-8">
+        <div className="flex items-center gap-12 mt-10">
           <div>
             <h4 className="text-lg font-semibold">Total Income</h4>
             <p className="text-2xl font-bold">$62,932</p>
@@ -29,7 +29,7 @@ function Overview() {
             <p className="text-2xl font-bold">$3,542</p>
           </div>
         </div>
-        <div className="mt-4 flex items-center gap-3 mt-10">
+        <div className="flex items-center gap-3 mt-10">
           <h5 className="text-sm font-semibold">January Summary:</h5>
           <p className="text-sm">
             Total Fund in Escrow: <strong>$350</strong> &nbsp; Total Income:{" "}

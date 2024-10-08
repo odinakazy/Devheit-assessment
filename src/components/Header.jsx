@@ -1,12 +1,19 @@
+/* eslint-disable react/prop-types */
 import Notificationicon from "../assets/notification.svg";
 import Messageicon from "../assets/message.svg";
 
-function Header() {
+function Header({ onOpen }) {
+  const openHandler = () => {
+    onOpen(true);
+  };
   return (
     <div className="hidden lg:block lg:flex lg:justify-between lg:items-center lg:mb-6 lg:mt-4 lg:font-sf-pro">
       <h2 className="text-lg font-bold text-[#053559]">Dashboard</h2>
       <div className="flex items-center gap-4">
-        <button className="bg-[#053559] text-white px-4 py-2 rounded-md">
+        <button
+          onClick={openHandler}
+          className="bg-[#053559] text-white px-4 font-sf-pro py-2 rounded-md"
+        >
           + Create a New Campaign
         </button>
         <div className="relative">
