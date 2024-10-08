@@ -1,6 +1,6 @@
 import Viewicon from "../assets/view.svg";
 import Viewicon2 from "../assets/view2.svg";
-import Profileimg from "../assets/profile2.png";
+import Profileimg from "../assets/pro.png";
 function Overview() {
   return (
     <div className="hidden lg:block lg:grid lg:grid-cols-3 lg:font-sf-pro gap-6 mt-4 mb-6 ">
