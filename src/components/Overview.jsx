@@ -1,4 +1,5 @@
 import Viewicon from "../assets/view.svg";
+import Image from "../assets/pro.png";
 import Viewicon2 from "../assets/view2.svg";
 // import Profileimg from "../assets/pro.png";
 function Overview() {
@@ -47,11 +48,7 @@ function Overview() {
           <img src={Viewicon2} alt="viewicon" />
         </div>
         <div className="flex items-center gap-2">
-          {/* <img
-            src={Profileimg}
-            alt="Profile"
-            className="w-18 h-18 rounded-full"
-          /> */}
+          <img src={Image} alt="Profile" className="w-18 h-18 rounded-full" />
           <div>
             <h4 className="font-bold text-[#053559]">Olivia Jacobs Jacobs</h4>
             <p className="text-sm">15%</p>
