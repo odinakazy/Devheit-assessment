@@ -1,5 +1,5 @@
 import Viewicon from "../assets/view.svg";
-import Image from "../assets/pro.png";
+import Image from "../assets/photo.svg";
 import Viewicon2 from "../assets/view2.svg";
 // import Profileimg from "../assets/pro.png";
 function Overview() {
